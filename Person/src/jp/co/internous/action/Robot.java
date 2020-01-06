@@ -1,18 +1,15 @@
 package jp.co.internous.action;
 
-public class Person {
+public class Robot {
 
 	public String name=null;
-	public int age=0;
-	public String phoneNember=null;
-	public String addres=null;
-	public void talk() {
+	public void talk(){
 		System.out.println(this.name+"が話す");
 	}
-	public void walk() {
+	public void walk(){
 		System.out.println(this.name+"が歩く");
 	}
-	public void run() {
+	public void run(){
 		System.out.println(this.name+"が走る");
 	}
 }
