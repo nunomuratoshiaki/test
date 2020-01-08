@@ -1,3 +1,5 @@
+package jp.co.internous.action;
+
 import java.util.ArrayList;
 import java.util.List;
 
