@@ -80,10 +80,10 @@ public void selectByPassword(String password) {
 	DBConnector db=new DBConnector();
 	Connection con=db.getConnection();
 
-	String sql="select * from test_table where user_name=?";
+	String sql="select * from test_table where password=?";
 	try {
 		PreparedStatement ps=con.prepareStatement(sql);
-		ps.setString(1, name);
+		ps.setString(1, password);
 		ResultSet rs=ps.executeQuery();
 		while(rs.next()) {
 			System.out.println(rs.getString("user_name"));
@@ -102,7 +102,7 @@ public void updateUserNameByUserName(String oldName,String newName){
 	DBConnector db=new DBConnector();
 	Connection con=db.getConnection();
 
-	String sql="insert into test_table set user_name=? where user_name=?";
+	String sql="update test_table set user_name=? where user_name=?";
     try{
     	PreparedStatement ps=con.prepareStatement(sql);
     	ps.setString(1, newName);
@@ -149,7 +149,7 @@ public void delete(String name){
 	DBConnector db=new DBConnector();
 	Connection con=db.getConnection();
 
-	String sql="delete from test_teble where user_name=?";
+	String sql="delete from test_table where user_name=?";
 	try{
 		PreparedStatement ps=con.prepareStatement(sql);
 		ps.setString(1, name);
