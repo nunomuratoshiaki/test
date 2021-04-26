@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>HelloJSP</title>
 </head>
 <body>
 
 <% request.setCharacterEncoding("UTF-8"); %>
-<p>こんにちは、<%=request.getParameter("user") %>さん！</p>
+<p>こんにちは、<%=request.getParameter("user") %>さん!</p>
 </body>
 </html>
